@@ -72,6 +72,7 @@ body {
 	color: $base-color;
 	overflow-x: hidden;
 	position: relative;
+	background-color: $color-3;
 	font: {
 		style: normal;
 		weight: $base-fw;
@@ -84,9 +85,11 @@ a {
 	text-decoration: none;
 	text-decoration-skip-ink: none;
 	color: $link;
+	transition: $base-trn;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
+		color: $color-2;
 	}
 }
 
@@ -106,5 +109,5 @@ img {
 
 .wrapper {
 	position: relative;
-	overflow: hidden;
+	overflow-x: hidden;
 }

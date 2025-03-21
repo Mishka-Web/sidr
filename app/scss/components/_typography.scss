@@ -6,14 +6,16 @@
 .title {
 	font-size: 9.6rem;
 	font-weight: 300;
+	line-height: 0.76;
 }
 
 .subtitle {
-
 }
 
 .text {
 	font-family: "Montserrat", sans-serif;
+	font-style: italic;
+	font-weight: 200;
 }
 
 .content {
@@ -26,3 +28,42 @@
 	}
 }
 
+.is-custom-text {
+	&-1,
+	&-2,
+	&-3,
+	&-4 {
+		position: relative;
+		padding-inline-end: 11%;
+		transition: $base-trn;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+
+		i {
+			font-style: normal;
+			// border-block-end: 2px solid $color-2;
+			text-decoration: underline;
+			text-decoration-color: $color-2;
+			text-underline-offset: 0.55rem;
+			text-decoration-thickness: 1.5px;
+			text-decoration-skip-ink: none;
+		}
+	}
+
+	&-1 {
+		background-image: linear-gradient(88deg, #000000, #fbfaf8);
+	}
+
+	&-2 {
+		background-image: linear-gradient(76deg, #ffffff, #646464);
+	}
+
+	&-3 {
+		background-image: linear-gradient(88deg, #000000, #646464);
+	}
+
+	&-4 {
+		background-image: linear-gradient(88deg, #000000, #9f9f9f);
+	}
+}

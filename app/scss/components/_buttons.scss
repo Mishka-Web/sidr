@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .btn {
 	$this: &;
 
@@ -13,4 +15,87 @@
 	min-height: 4.4rem;
 	font-weight: 600;
 	padding: 0 1.5rem;
+
+	span {
+		display: inline-block;
+		border-block-end: 1px solid transparent;
+		transition: $base-trn;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&.btn {
+		&-blur {
+			backdrop-filter: blur(12.7rem);
+			border: 1px solid $color-1;
+			background-color: color.adjust($color-1, $alpha: -0.9);
+			font-style: italic;
+			font-weight: 400;
+			font-size: 2rem;
+			letter-spacing: -0.03em;
+			text-transform: uppercase;
+			font-family: "Montserrat", sans-serif;
+			color: $color-1;
+			min-height: 8.1rem;
+			padding: 2.4rem;
+
+			&:hover {
+				backdrop-filter: blur(3rem);
+			}
+		}
+
+		&-primary {
+			background-color: transparent;
+			border: 1px solid $color-4;
+			padding: 1.8rem 2.4rem;
+			color: $base-color;
+			min-height: 7.8rem;
+			font-style: italic;
+			font-weight: 300;
+			font-size: 1.6;
+			text-transform: uppercase;
+			font-family: "Montserrat", sans-serif;
+
+			&:hover {
+				background-color: $color-5;
+				color: $color-1;
+
+				span {
+					color: $color-1;
+					border-block-end-color: $color-1;
+				}
+			}
+		}
+
+		&-outline {
+			background-color: transparent;
+			border: 1px solid $base-color;
+			padding: 1.8rem 2.4rem;
+			color: $base-color;
+			min-height: 8.4rem;
+			font-style: italic;
+			letter-spacing: -0.03em;
+			font-weight: 300;
+			font-size: 2.4rem;
+			text-transform: uppercase;
+			font-family: "Montserrat", sans-serif;
+
+			span {
+				border-block-end-width: 2px;
+			}
+
+			&:hover {
+				span {
+					border-block-end-color: $color-2;
+
+					&::before {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
 }

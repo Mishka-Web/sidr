@@ -7,89 +7,164 @@ block title
 	title Главная
 
 block main
+
+	//- TODO: Доверстать блок
 	section.block.block-intro 
 		.container 
 			.block-intro__grid 
 				.block-intro__item 
-					img.block-intro__image.icon(src="./img/intro/img1.png", alt="")
+					img.block-intro__image.icon(src="./img/intro/img1.png" alt="")
+					h2.title.is-custom-text-2 Объединяем напитками, согреваем едой
 				.block-intro__item 
-					img.block-intro__image.icon(src="./img/intro/img2.png", alt="")
+					img.block-intro__image.icon(src="./img/intro/img2.png" alt="")
 				.block-intro__item 
 					p.text Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня 
-					a.btn(href="#") забронировать столик
+					a.btn.btn-outline(href="#")
+						span забронировать столик
 
-	section.block
+	section.block.block-special
 		.container 
 			.heading 
-				h3.title Специальные предложения
+				h3.title.is-custom-text-1 <i>Специальные</i> предложения
+				.slider__btns 
+					button.slider__btn.slider__btn-prev(type="button")
+						img.icon(src="./img/icons/arrow.png" alt="")
+					button.slider__btn.slider__btn-next(type="button")
+						img.icon(src="./img/icons/arrow-r.png" alt="")
 			.block__slider 
 				.swiper 
 					.swiper-wrapper
-						.swiper-slide
-							img.icon(src="./img/special/img1.png", alt="")
-							p.block__slide-text 28.02-05.03
-						.swiper-slide 
-							img.icon(src="./img/special/img2.png", alt="")
-							p.block__slide-text 03.03-04.05
-						.swiper-slide
-							img.icon(src="./img/special/img3.png", alt="")
-							p.block__slide-text 04.03-12.03
-						.swiper-slide
-							img.icon(src="./img/special/img4.png", alt="")
-							p.block__slide-text 12.03-15.03
+						-for(var i = 0; i < 3; i++)
+							.swiper-slide
+								a.block__slide(href="#") 
+									img.icon(src="./img/special/img1.png" alt="")
+									p.block__slide-text.is-custom-text-1 28.02-05.03
+							.swiper-slide 
+								a.block__slide(href="#")
+									img.icon(src="./img/special/img2.png" alt="")
+									p.block__slide-text.is-custom-text-1 03.03-04.05
+							.swiper-slide
+								a.block__slide(href="#")
+									img.icon(src="./img/special/img3.png" alt="")
+									p.block__slide-text.is-custom-text-1 04.03-12.03
+							.swiper-slide
+								a.block__slide(href="#")
+									img.icon(src="./img/special/img4.png" alt="")
+									p.block__slide-text.is-custom-text-1 12.03-15.03
 
+	//- TODO: Доверстать блок
 	section.block.block-about 
 		.container 
 			.block-about__grid 
 				.block-about__image 
-					img.icon(src="./img/about/img1.png", alt="")
+					img.icon(src="./img/about/img1.png" alt="")
 				.block-about__content
 					h3.title Сидерия - новый гастробар, где живет уют и забота
 					.content
 						p Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня от нашего замечательного шеф-повара не оставит равнодушным ни кого и найдет положительный отклик у самого взыскательного и требовательного гостя.
 						div 
-							img.icon(src="", alt="")
+							img.icon(src="" alt="")
 							p Мы очень постарались и  собрали самый большой и вкусный ассортимент сидров во всем Сочи. Представлена широкая линейка сидров из России, Испании, Франции
 
 	section.block.block-booking 
-		.container 
-			.block-booking__bg-img 
-				img.icon(src="./img/booking/bg-image.png", alt="")
-			a.btn(href="#") забронировать столик
+		.block-booking__wrapper 
+			img.icon(src="./img/booking/bg-image.png" alt="")
+			.container 
+				a.btn.btn-blur(href="#") забронировать столик
 
-	section.block
+	section.block.block-events
 		.container
 			.heading 
-				h3.title Новые события каждую неделю - все для Вас 
+				h3.title.is-custom-text-1 Новые события каждую<br>неделю - <i>все для Вас</i>
+				.slider__btns 
+					button.slider__btn.slider__btn-prev(type="button")
+						img.icon(src="./img/icons/arrow.png" alt="")
+					button.slider__btn.slider__btn-next(type="button")
+						img.icon(src="./img/icons/arrow-r.png" alt="")
 			.block__slider 
 				.swiper 
 					.swiper-wrapper
-						.swiper-slide
-							img.icon(src="./img/special/img1.png", alt="")
-							p.block__slide-text 28.02-05.03
-						.swiper-slide 
-							img.icon(src="./img/special/img2.png", alt="")
-							p.block__slide-text 03.03-04.05
-						.swiper-slide
-							img.icon(src="./img/special/img3.png", alt="")
-							p.block__slide-text 04.03-12.03
-						.swiper-slide
-							img.icon(src="./img/special/img4.png", alt="")
-							p.block__slide-text 12.03-15.03
+						-for(var i = 0; i < 3; i++)
+							.swiper-slide
+								a.block__slide(href="#") 
+									img.icon(src="./img/events/img1.png" alt="")
+									p.block__slide-text.is-custom-text-1 пятница 28.02
+							.swiper-slide 
+								a.block__slide(href="#") 
+									img.icon(src="./img/events/img2.png" alt="")
+									p.block__slide-text.is-custom-text-1 понедельник 03.03
+							.swiper-slide
+								a.block__slide(href="#") 
+									img.icon(src="./img/events/img3.png" alt="")
+									p.block__slide-text.is-custom-text-1 пятница 08.04
+							.swiper-slide
+								a.block__slide(href="#") 
+									img.icon(src="./img/events/img4.png" alt="")
+									p.block__slide-text.is-custom-text-1 четверг 12.06
 
+	//- TODO: Доверстать блок
 	section.block.block-birthday 
 		.container
 
 	section.block.block-menu 
 		.container 
+			.block-menu__grid-box 
+				.block-menu__content 
+					h3.title.is-custom-text-1 Наше меню - <i>сердце</i> нашего гастробара
+					p.text В первую очередь, гастробар - это еда и напитки, мы сделали все возможное и невозможное, чтобы вы остались довольны
+				.block-menu__list-box
+					ul 
+						li 
+							a(href="#") 
+								p.is-custom-text-1 Карта сидоров 
+								img.icon(src="./img/icons/arr-r-grey.png" alt="")
+						li 
+							a(href="#") 
+								p.is-custom-text-1 Карта бара
+								img.icon(src="./img/icons/arr-r-grey.png" alt="")
+						li 
+							a(href="#") 
+								p.is-custom-text-1 Меню ресторана
+								img.icon(src="./img/icons/arr-r-grey.png" alt="")
+
+			.block-menu__panel
+				.block-menu__panel-content 
+					h3.title.is-custom-text-4 Любим своих гостей и<br>прислушиваемся <i>к каждому слову</i>
+					p.text У вас есть вопросы или предложения для нашего гастробару? Напишите нашему управляющему и обсудите все с ним
+				a.btn.btn-primary(href="#")
+					span написать письмо
 
 	section.block.block-team 
 		.container 
-	
+
 	section.block.block-gallery
 		.container 
-			h2.title Фотогаллерая нас, нашего гастробара, блюд, напитков и прекрасных гостей
+			h2.title.is-custom-text-1 Фотогаллерая нас, нашего гастробара, блюд, напитков и прекрасных гостей
 		.block-gallery__grid
-			-for(let i = 0; i < 12; i++)
-				.block-gallery__item
+			-for(let i = 1; i <= 12; i++)
+				div(class=`block-gallery__item block-gallery__item-${i}` style=`grid-area: a${i};`)
 					img.icon(src=`./img/gallery/img${i}.png`, alt="")
+
+	section.block.block-contacts 
+		.container 
+			.block-contacts__grid 
+				.block-contacts__info-box 
+					.block-contacts__info-title.title.is-custom-text-3 Ждем вас с нетерпением<br><i>и сидором</i>
+					.block-contacts__list 
+						ul 
+							li 
+								a(href="tel:8 800 245 89-49") 8 800 245 89-49
+							li 
+								p.is-custom-text-4 Сочи, Адлер, РЦ Бестужева 1/1, "Мандарин"
+							li 
+								p.is-custom-text-4 Ежедневно: 11:00 - 02:00
+							li 
+								a(href="#") 
+									p.is-custom-text-4 Написать в Telegram
+									img.icon(src="./img/icons/arr-r.png" alt="")
+							li 
+								a(href="#") 
+									p.is-custom-text-4 Написать на WhatsApp
+									img.icon(src="./img/icons/arr-r.png" alt="")
+			.block-contacts__image 
+				img.icon(src="./img/form/img1.png" alt="")

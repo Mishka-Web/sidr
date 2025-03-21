@@ -1,3 +1,5 @@
+@use "sass:color";
+
 // Utilities
 @import "utils/_vars";
 @import "utils/_supports";
@@ -18,7 +20,349 @@
 @import "layout/_header";
 
 .block {
-	padding-block: 6rem;
+	padding-block: 5rem;
+
+	&__slider {
+		overflow: hidden;
+		
+		.swiper {
+			&-slide {
+				display: flex;
+
+				img {
+					display: block;
+					width: 100%;
+					max-width: 100%;
+					object-fit: cover;
+					height: 50.25rem;
+				}
+			}
+		}
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.55rem;
+		width: 100%;
+		min-width: 0;
+
+		&:hover {
+			text-decoration: none;
+			color: $color-2;
+
+			.block__slide-text {
+				color: $color-2;
+			}
+		}
+
+		&-text {
+			font-size: 3.2rem;
+		}
+	}
+
+	&-events {
+		.heading {
+			.title {
+				line-height: 0.8;
+			}
+		}
+	}
+
+	&-gallery {
+		.title {
+			line-height: 0.8;
+		}
+
+		&__grid {
+			display: flex;
+			flex-wrap: wrap;
+			margin-block-start: 2rem;
+			gap: 4rem 2rem;
+		}
+
+		&__item {
+			display: flex;
+			flex: 1 1 auto;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&:nth-child(-n + 4) {
+				flex: 1 1 calc(calc(100% / 4) - 2rem);
+			}
+
+			&:nth-child(n + 5):nth-child(-n + 7) {
+				flex: 1 1 calc(calc(100% / 3) - 2rem);
+				padding-inline: 2rem;
+			}
+
+			&:nth-child(n + 8):nth-child(-n + 12) {
+				flex: 1 1 calc(calc(100% / 5) - 2rem);
+			}
+
+			&:nth-child(5) {
+				padding-inline-end: 1rem !important;
+			}
+
+			&:nth-child(6) {
+				padding-inline: 1rem !important;
+			}
+
+			&:nth-child(7) {
+				padding-inline-start: 1rem !important;
+			}
+		}
+	}
+
+	&-booking {
+		&__wrapper {
+			position: relative;
+			padding-block: 8.1rem;
+
+			.container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			img {
+				object-fit: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+		}
+	}
+
+	&-contacts {
+		padding-block-start: 7rem;
+		position: relative;
+
+		.container {
+			position: relative;
+		}
+
+		&__info-box {
+			display: flex;
+			flex-direction: column;
+			gap: 6.1rem;
+			max-width: 65rem;
+			width: 100%;
+		}
+
+		&__info-title {
+			padding-inline-end: 0;
+			letter-spacing: -0.01em;
+			line-height: 0.75;
+		}
+
+		&__list {
+			font-size: 5rem;
+
+			& > ul {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+
+				& > li {
+					display: flex;
+					align-items: center;
+					padding-block: 2.5rem;
+					border-block-end: 2px solid $base-color;
+					height: 10rem;
+
+					.is-custom-text-4 {
+						padding-inline-end: 6.5%;
+					}
+
+					&:first-child {
+						& > a {
+							color: $color-2;
+
+							&:hover {
+								color: $base-color;
+							}
+						}
+					}
+
+					& > a {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						width: 100%;
+
+						&:hover {
+							.is-custom-text-4 {
+								color: $color-2;
+							}
+
+							.icon {
+								transform: translate3d(0.65rem, 0, 0);
+							}
+						}
+
+						.icon {
+							transition: $base-trn;
+							@include box(6rem);
+						}
+					}
+				}
+			}
+		}
+
+		&__image {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			position: absolute;
+			inset-inline-end: -23%;
+			inset-block-start: 50%;
+			transform: translateY(-50%);
+			width: 98.1rem;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&-menu {
+		&__grid-box {
+			display: grid;
+			grid-template-columns: 1fr 73.3rem;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 1.6rem;
+
+			.text {
+				max-width: 46.5rem;
+				text-align: justify;
+			}
+		}
+
+		&__list-box {
+			font-size: 5rem;
+
+			& > ul {
+				& > li {
+					display: flex;
+
+					& > a {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						gap: 1rem;
+						height: 10rem;
+						width: 100%;
+						border-block-end: 2px solid $base-color;
+
+						&:hover {
+							.is-custom-text-1 {
+								color: $color-2;
+							}
+						}
+
+						.icon {
+							@include box(6rem);
+						}
+					}
+				}
+			}
+		}
+
+		&__panel {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-block-start: 12.3rem;
+			gap: 1.5rem;
+			padding-block: 3.6rem;
+			border-block: 2px solid $base-color;
+
+			&-content {
+				display: flex;
+				align-items: center;
+				gap: 8.3rem;
+				flex: 1 1 auto;
+
+				.title {
+					font-size: 4rem;
+					padding-inline-end: 0;
+					line-height: 0.85;
+				}
+
+				.text {
+					max-width: 43.6rem;
+				}
+			}
+		}
+	}
+}
+
+.slider {
+	&__btns {
+		display: flex;
+		align-items: center;
+		height: 8rem;
+		gap: 1.9rem;
+	}
+
+	&__btn {
+		display: inline-flex;
+		transition: $base-trn;
+
+		&.is-disabled {
+			pointer-events: none;
+			opacity: 0.45;
+		}
+
+		&-next {
+			&:hover {
+				.icon {
+					transform: translateX(-0.35rem) translateZ(0);
+				}
+			}
+		}
+
+		&-prev {
+			&:hover {
+				.icon {
+					transform: translateX(0.35rem) translateZ(0);
+				}
+			}
+		}
+
+		.icon {
+			@include box(5.6rem);
+		}
+	}
+}
+
+.heading {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1.2rem;
+	margin-block-end: 3.6rem;
+
+	.title {
+		line-height: 8rem;
+	}
 }
 
 @import "layout/_footer";

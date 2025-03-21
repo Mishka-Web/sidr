@@ -3,7 +3,7 @@ $breakpoints: (
 	tablet: 768px,
 	tablet-wide: 992px,
 	laptop: 1200px,
-	desktop: 1400px
+	desktop: 1500px
 );
 
 @include mq("mobile", min) {
