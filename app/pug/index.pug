@@ -1,0 +1,95 @@
+extends sample/_default
+
+block tools 
+	include utils/_mixins
+
+block title
+	title Главная
+
+block main
+	section.block.block-intro 
+		.container 
+			.block-intro__grid 
+				.block-intro__item 
+					img.block-intro__image.icon(src="./img/intro/img1.png", alt="")
+				.block-intro__item 
+					img.block-intro__image.icon(src="./img/intro/img2.png", alt="")
+				.block-intro__item 
+					p.text Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня 
+					a.btn(href="#") забронировать столик
+
+	section.block
+		.container 
+			.heading 
+				h3.title Специальные предложения
+			.block__slider 
+				.swiper 
+					.swiper-wrapper
+						.swiper-slide
+							img.icon(src="./img/special/img1.png", alt="")
+							p.block__slide-text 28.02-05.03
+						.swiper-slide 
+							img.icon(src="./img/special/img2.png", alt="")
+							p.block__slide-text 03.03-04.05
+						.swiper-slide
+							img.icon(src="./img/special/img3.png", alt="")
+							p.block__slide-text 04.03-12.03
+						.swiper-slide
+							img.icon(src="./img/special/img4.png", alt="")
+							p.block__slide-text 12.03-15.03
+
+	section.block.block-about 
+		.container 
+			.block-about__grid 
+				.block-about__image 
+					img.icon(src="./img/about/img1.png", alt="")
+				.block-about__content
+					h3.title Сидерия - новый гастробар, где живет уют и забота
+					.content
+						p Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня от нашего замечательного шеф-повара не оставит равнодушным ни кого и найдет положительный отклик у самого взыскательного и требовательного гостя.
+						div 
+							img.icon(src="", alt="")
+							p Мы очень постарались и  собрали самый большой и вкусный ассортимент сидров во всем Сочи. Представлена широкая линейка сидров из России, Испании, Франции
+
+	section.block.block-booking 
+		.container 
+			.block-booking__bg-img 
+				img.icon(src="./img/booking/bg-image.png", alt="")
+			a.btn(href="#") забронировать столик
+
+	section.block
+		.container
+			.heading 
+				h3.title Новые события каждую неделю - все для Вас 
+			.block__slider 
+				.swiper 
+					.swiper-wrapper
+						.swiper-slide
+							img.icon(src="./img/special/img1.png", alt="")
+							p.block__slide-text 28.02-05.03
+						.swiper-slide 
+							img.icon(src="./img/special/img2.png", alt="")
+							p.block__slide-text 03.03-04.05
+						.swiper-slide
+							img.icon(src="./img/special/img3.png", alt="")
+							p.block__slide-text 04.03-12.03
+						.swiper-slide
+							img.icon(src="./img/special/img4.png", alt="")
+							p.block__slide-text 12.03-15.03
+
+	section.block.block-birthday 
+		.container
+
+	section.block.block-menu 
+		.container 
+
+	section.block.block-team 
+		.container 
+	
+	section.block.block-gallery
+		.container 
+			h2.title Фотогаллерая нас, нашего гастробара, блюд, напитков и прекрасных гостей
+		.block-gallery__grid
+			-for(let i = 0; i < 12; i++)
+				.block-gallery__item
+					img.icon(src=`./img/gallery/img${i}.png`, alt="")

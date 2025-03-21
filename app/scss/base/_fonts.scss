@@ -1,0 +1,25 @@
+@include init-fonts(
+	(
+		(
+			"Montserrat": (
+				"Montserrat-Regular": (
+					"font-weight": 400
+				),
+				"Montserrat-Medium": (
+					"font-weight": 500
+				),
+				"Montserrat-SemiBold": (
+					"font-weight": 600
+				),
+				"Montserrat-Bold": (
+					"font-weight": 700
+				)
+			),
+			"Entropia": (
+				"Entropia-Light": (
+					"font-weight": 300,
+				),
+			)
+		)
+	)
+);

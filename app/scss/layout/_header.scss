@@ -1,0 +1,47 @@
+.header {
+	flex: 0 0 auto;
+	position: absolute;
+	inset-block-start: 4.2rem;
+	inset-inline-start: 0;
+	width: 100%;
+	z-index: 80;
+
+	&-inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		inset-inline-end: 0;
+		inset-block-start: 50%;
+		transform: translateY(-50%);
+		max-width: 95%;
+		width: 100%;
+
+		& > img {
+			width: auto;
+			height: 13.588rem;
+			object-fit: contain;
+			max-width: 100%;
+		}
+	}
+
+	&__nav {
+		& > ul {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__logo {
+		display: inline-flex;
+
+		.icon {
+			@include box(19.9rem, 7.9rem);
+			max-width: 100%;
+		}
+	}
+}

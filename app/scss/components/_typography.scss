@@ -1,0 +1,28 @@
+.main-title {
+	font-size: 12.8rem;
+	font-weight: 300;
+}
+
+.title {
+	font-size: 9.6rem;
+	font-weight: 300;
+}
+
+.subtitle {
+
+}
+
+.text {
+	font-family: "Montserrat", sans-serif;
+}
+
+.content {
+	& > * {
+		display: block;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+}
+
