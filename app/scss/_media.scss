@@ -3,7 +3,8 @@ $breakpoints: (
 	tablet: 768px,
 	tablet-wide: 992px,
 	laptop: 1200px,
-	desktop: 1500px
+	desktop: 1400px,
+	desktop-wide: 1500px
 );
 
 @include mq("mobile", min) {
@@ -12,9 +13,27 @@ $breakpoints: (
 	}
 }
 
-@include mq("desktop", min) {
+@include mq("desktop-wide", min) {
 	.container {
 		max-width: 1400px;
+	}
+}
+
+@include mq("desktop-wide") {
+	:root {
+		font-size: 9.5px;
+	}
+}
+
+@include mq("desktop") {
+	:root {
+		font-size: 8.25px;
+	}
+}
+
+@include mq("laptop") {
+	:root {
+		font-size: 7px;
 	}
 }
 
