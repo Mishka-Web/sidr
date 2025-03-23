@@ -22,7 +22,7 @@
               <li> <a href="#">корпоратив</a></li>
             </ul>
           </nav><a class="header__logo" href="index.html"> <img class="icon" src="img/logo.png" alt=""></a>
-          <nav class="header__nav">
+          <nav class="header__nav header__nav--is-right">
             <ul> 
               <li> <a href="#">меню</a></li>
               <li> <a href="#">фотограллерея</a></li>
@@ -34,16 +34,14 @@
     </header>
     <main class="main">
       <div class="wrapper">
-        <section class="block block-intro"> 
-          <div class="container"> 
-            <div class="block-intro__grid"> 
-              <div class="block-intro__item"> <img class="block-intro__image icon" src="./img/intro/img1.png" alt="">
-                <h2 class="title is-custom-text-2">Объединяем напитками, согреваем едой</h2>
-              </div>
-              <div class="block-intro__item"> <img class="block-intro__image icon" src="./img/intro/img2.png" alt=""></div>
-              <div class="block-intro__item"> 
-                <p class="text">Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня </p><a class="btn btn-outline" href="#"><span>забронировать столик</span></a>
-              </div>
+        <section class="block block-intro">
+          <div class="block-intro__grid"> 
+            <div class="block-intro__item block-intro__item-1"> <img class="block-intro__image icon" src="./img/intro/img1.png" alt="">
+              <h2 class="main-title is-custom-text-2 block-intro__item-text">Объединяем напитками, согреваем едой</h2>
+            </div>
+            <div class="block-intro__item block-intro__item-2"> <img class="block-intro__image icon" src="./img/intro/img2.png" alt=""></div>
+            <div class="block-intro__item block-intro__item-3"> 
+              <p class="text">Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня </p><a class="btn btn-outline" href="#"><span>забронировать столик</span></a>
             </div>
           </div>
         </section>
@@ -91,13 +89,23 @@
         <section class="block block-about"> 
           <div class="container"> 
             <div class="block-about__grid"> 
-              <div class="block-about__image"> <img class="icon" src="./img/about/img1.png" alt=""></div>
+              <div class="block-about__image"> <img class="block-about__image-main icon" src="./img/about/img1.png" alt="">
+                <div class="block-about__image-elem block-about__image-elem-1"></div>
+                <div class="block-about__image-elem block-about__image-elem-2"></div>
+                <div class="block-about__image-elem block-about__image-elem-3"></div>
+                <div class="block-about__image-elem block-about__image-elem-4"></div><img class="block-about__image-dec block-about__image-dec-1 icon" src="./img/about/lips.png" alt="">
+              </div>
               <div class="block-about__content">
-                <h3 class="title">Сидерия - новый гастробар, где живет уют и забота</h3>
-                <div class="content">
+                <h3 class="title is-custom-text-1">Сидерия -<br>новый гастробар,<br>где живет <i>уют и забота</i></h3>
+                <div class="content text">
                   <p>Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня от нашего замечательного шеф-повара не оставит равнодушным ни кого и найдет положительный отклик у самого взыскательного и требовательного гостя.</p>
-                  <div> <img class="icon" src="" alt="">
+                </div>
+                <div class="block-about__blocks text">
+                  <div class="block-about__blocks-item block-about__blocks-item-1"> <img class="icon" src="./img/about/img2.png" alt="">
                     <p>Мы очень постарались и  собрали самый большой и вкусный ассортимент сидров во всем Сочи. Представлена широкая линейка сидров из России, Испании, Франции</p>
+                  </div>
+                  <div class="block-about__blocks-item block-about__blocks-item-2"> <img class="icon" src="./img/about/img3.png" alt="">
+                    <p>Сидрерия — это не только про сидр, это про великолепную кухню с широким ассортиментом всевозможных закусок с вяленым мясом собственного производства. Брускетты, тапосы, салаты, мясо на мангале, ребра, рыба и много другое</p>
                   </div>
                 </div>
               </div>
@@ -180,7 +188,30 @@
           </div>
         </section>
         <section class="block block-team"> 
-          <div class="container"> </div>
+          <div class="container"> 
+            <div class="block-team__grid"> 
+              <div class="block-team__item"> 
+                <div class="block-team__item-content-box">
+                  <h3 class="main-title is-custom-text-1">Наша команда -</h3>
+                  <p class="text">Команда - сердце корабля, в нашем случае, корабль - наш гастробар</p>
+                </div>
+                <div class="block-team__wrap-image">
+                  <p class="text">Михаил<br>Шеф-повар</p>
+                  <div class="block-team__image-box"><img class="icon" src="./img/team/img1.png" alt=""><span></span></div>
+                </div>
+              </div>
+              <div class="block-team__item"> 
+                <div class="block-team__item-content text">
+                  <p>Остальные сотрудники еще готовятся к фотосессии</p>
+                  <p>мы добавим их чуть позже, не переживайте</p>
+                </div>
+                <div class="block-team__wrap-image">
+                  <p class="text">Аня<br>Администратор</p>
+                  <div class="block-team__image-box"><img class="icon" src="./img/team/img2.png" alt=""><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section class="block block-gallery">
           <div class="container"> 

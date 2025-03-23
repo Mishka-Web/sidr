@@ -7,20 +7,17 @@ block title
 	title Главная
 
 block main
-
-	//- TODO: Доверстать блок
-	section.block.block-intro 
-		.container 
-			.block-intro__grid 
-				.block-intro__item 
-					img.block-intro__image.icon(src="./img/intro/img1.png" alt="")
-					h2.title.is-custom-text-2 Объединяем напитками, согреваем едой
-				.block-intro__item 
-					img.block-intro__image.icon(src="./img/intro/img2.png" alt="")
-				.block-intro__item 
-					p.text Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня 
-					a.btn.btn-outline(href="#")
-						span забронировать столик
+	section.block.block-intro
+		.block-intro__grid 
+			.block-intro__item.block-intro__item-1 
+				img.block-intro__image.icon(src="./img/intro/img1.png" alt="")
+				h2.main-title.is-custom-text-2.block-intro__item-text Объединяем напитками, согреваем едой
+			.block-intro__item.block-intro__item-2 
+				img.block-intro__image.icon(src="./img/intro/img2.png" alt="")
+			.block-intro__item.block-intro__item-3 
+				p.text Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня 
+				a.btn.btn-outline(href="#")
+					span забронировать столик
 
 	section.block.block-special
 		.container 
@@ -52,19 +49,27 @@ block main
 									img.icon(src="./img/special/img4.png" alt="")
 									p.block__slide-text.is-custom-text-1 12.03-15.03
 
-	//- TODO: Доверстать блок
 	section.block.block-about 
 		.container 
 			.block-about__grid 
 				.block-about__image 
-					img.icon(src="./img/about/img1.png" alt="")
+					img.block-about__image-main.icon(src="./img/about/img1.png" alt="")
+					.block-about__image-elem.block-about__image-elem-1
+					.block-about__image-elem.block-about__image-elem-2
+					.block-about__image-elem.block-about__image-elem-3
+					.block-about__image-elem.block-about__image-elem-4
+					img.block-about__image-dec.block-about__image-dec-1.icon(src="./img/about/lips.png" alt="")
 				.block-about__content
-					h3.title Сидерия - новый гастробар, где живет уют и забота
-					.content
+					h3.title.is-custom-text-1 Сидерия -<br>новый гастробар,<br>где живет <i>уют и забота</i>
+					.content.text
 						p Сидрерия — это место, где уют и забота окутывает со всех сторон. Великолепная европейская кухня от нашего замечательного шеф-повара не оставит равнодушным ни кого и найдет положительный отклик у самого взыскательного и требовательного гостя.
-						div 
-							img.icon(src="" alt="")
+					.block-about__blocks.text
+						.block-about__blocks-item.block-about__blocks-item-1 
+							img.icon(src="./img/about/img2.png" alt="")
 							p Мы очень постарались и  собрали самый большой и вкусный ассортимент сидров во всем Сочи. Представлена широкая линейка сидров из России, Испании, Франции
+						.block-about__blocks-item.block-about__blocks-item-2 
+							img.icon(src="./img/about/img3.png" alt="")
+							p Сидрерия — это не только про сидр, это про великолепную кухню с широким ассортиментом всевозможных закусок с вяленым мясом собственного производства. Брускетты, тапосы, салаты, мясо на мангале, ребра, рыба и много другое
 
 	section.block.block-booking 
 		.block-booking__wrapper 
@@ -136,6 +141,27 @@ block main
 
 	section.block.block-team 
 		.container 
+			.block-team__grid 
+				.block-team__item 
+					.block-team__item-content-box
+						h3.main-title.is-custom-text-1 Наша команда -
+						p.text Команда - сердце корабля, в нашем случае, корабль - наш гастробар
+					.block-team__wrap-image
+						p.text Михаил<br>Шеф-повар
+						.block-team__image-box
+							img.icon(src="./img/team/img1.png", alt="")
+							span
+
+				.block-team__item 
+					.block-team__item-content.text
+						p Остальные сотрудники еще готовятся к фотосессии
+						p мы добавим их чуть позже, не переживайте
+					.block-team__wrap-image
+						p.text Аня<br>Администратор
+						.block-team__image-box
+							img.icon(src="./img/team/img2.png", alt="")
+							span
+
 
 	section.block.block-gallery
 		.container 

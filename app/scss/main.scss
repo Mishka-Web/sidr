@@ -24,7 +24,7 @@
 
 	&__slider {
 		overflow: hidden;
-		
+
 		.swiper {
 			&-slide {
 				display: flex;
@@ -59,6 +59,74 @@
 
 		&-text {
 			font-size: 3.2rem;
+		}
+	}
+
+	&-intro {
+		padding: 0;
+		margin-block-end: 6.1rem;
+
+		&__grid {
+			display: grid;
+			grid-template-columns: 1fr 0.633fr;
+			grid-template-rows: 112.7rem 45rem;
+		}
+
+		&__item {
+			$this: &;
+
+			display: flex;
+			position: relative;
+			padding: 2.5rem;
+
+			.title,
+			.main-title {
+				line-height: 0.86;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				position: absolute;
+				inset-inline-start: 0;
+				inset-block-start: 0;
+			}
+
+			&-1 {
+				display: flex;
+				justify-content: flex-end;
+				grid-row: span 2;
+				padding: 0 5.5rem 0 0;
+
+				#{$this} {
+					&-text {
+						max-width: 86.9rem;
+						margin-block-start: 31rem;
+						margin-inline-start: auto;
+						padding-inline-end: 0;
+					}
+				}
+			}
+
+			&-3 {
+				display: flex;
+				flex-direction: column;
+				gap: 2.5rem;
+				justify-content: center;
+				padding: 2.1rem;
+
+				.text {
+					font-size: calc(1vw + 1.2rem);
+					font-weight: 300;
+					text-align: justify;
+					max-width: 66.8rem;
+				}
+
+				.btn {
+					margin-inline: auto;
+				}
+			}
 		}
 	}
 
@@ -309,6 +377,131 @@
 					max-width: 43.6rem;
 				}
 			}
+		}
+	}
+
+	&-about {
+		padding-block: 9rem 7.8rem;
+
+		&__image {
+			display: flex;
+			position: relative;
+
+			& > .block-about__image-main {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				z-index: 3;
+			}
+
+			&-elem {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				position: absolute;
+				border: 2px solid transparent;
+
+				&-1 {
+					inset-block-start: -6rem;
+					inset-inline-start: -6rem;
+					border-color: color.adjust($base-color, $alpha: -0.8);
+				}
+
+				&-2 {
+					inset-block-start: -2rem;
+					inset-inline-start: -2rem;
+					border-color: $color-2;
+				}
+
+				&-3 {
+					inset-block-start: 2rem;
+					inset-inline-start: 2rem;
+					border-color: color.adjust($base-color, $alpha: -0.15);
+				}
+
+				&-4 {
+					inset-block-start: 6rem;
+					inset-inline-start: 6rem;
+					border-color: color.adjust($color-2, $alpha: -0.8);
+				}
+			}
+
+			&-dec {
+				@include box(25.7rem, 23rem);
+				z-index: 4;
+				position: absolute;
+
+				&-1 {
+					inset-block-end: -8.4rem;
+					inset-inline-end: -5.25rem;
+				}
+			}
+		}
+
+		&__grid {
+			display: grid;
+			grid-template-columns: 1.06375fr 1fr;
+			gap: 4.2rem;
+		}
+
+		&__content {
+			.is-custom-text-1 {
+				padding-inline-end: 5%;
+				line-height: 0.82;
+			}
+
+			& > .title {
+				margin-block-end: 3.1rem;
+			}
+
+			& > .content {
+				font-size: 1.8rem;
+				text-align: justify;
+				max-width: 60.5rem;
+			}
+		}
+
+		&__blocks {
+			text-align: justify;
+			margin-block-start: 2rem;
+
+			&-item {
+				display: flex;
+				gap: 2.6rem;
+				padding-inline-end: 2.9rem;
+
+				img {
+					object-fit: cover;
+					@include box(22.2rem, auto);
+					max-width: 45%;
+				}
+
+				&:nth-child(even) {
+					align-items: flex-end;
+
+					img {
+						order: 2;
+						margin-block-start: -7.3rem;
+					}
+				}
+
+				&-1 {
+					gap: 3.734rem;
+					padding-inline-end: 5.3rem;
+
+					img {
+						inline-size: 25.366rem;
+					}
+				}
+			}
+		}
+	}
+
+	&-team {
+		&__grid {
+			display: grid;
+			grid-template-columns: 1fr 51.9rem;
+			gap: 4.6rem;
 		}
 	}
 }
