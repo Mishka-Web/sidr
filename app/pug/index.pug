@@ -110,6 +110,7 @@ block main
 	//- TODO: Доверстать блок
 	section.block.block-birthday 
 		.container
+			.block-birthday__
 
 	section.block.block-menu 
 		.container 
@@ -142,26 +143,23 @@ block main
 	section.block.block-team 
 		.container 
 			.block-team__grid 
-				.block-team__item 
+				.block-team__item.block-team__item--is-left 
 					.block-team__item-content-box
 						h3.main-title.is-custom-text-1 Наша команда -
 						p.text Команда - сердце корабля, в нашем случае, корабль - наш гастробар
 					.block-team__wrap-image
-						p.text Михаил<br>Шеф-повар
+						p.text.is-custom-text-1 <span>Михаил</span><span>Шеф-повар</span>
 						.block-team__image-box
-							img.icon(src="./img/team/img1.png", alt="")
-							span
+							img.icon(src="./img/team/img1.png" alt="")
 
-				.block-team__item 
+				.block-team__item.block-team__item--is-right 
 					.block-team__item-content.text
 						p Остальные сотрудники еще готовятся к фотосессии
 						p мы добавим их чуть позже, не переживайте
 					.block-team__wrap-image
-						p.text Аня<br>Администратор
+						p.text.is-custom-text-1 <span>Аня</span><span>Администратор</span>
 						.block-team__image-box
-							img.icon(src="./img/team/img2.png", alt="")
-							span
-
+							img.icon(src="./img/team/img2.png" alt="")
 
 	section.block.block-gallery
 		.container 
