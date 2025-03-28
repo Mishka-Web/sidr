@@ -19,11 +19,13 @@
 }
 
 .content {
+	--r-gap: 2rem;
+
 	& > * {
 		display: block;
 
 		&:not(:last-child) {
-			margin-bottom: 2rem;
+			margin-bottom: var(--r-gap, 2rem);
 		}
 	}
 }
@@ -42,7 +44,6 @@
 
 		i {
 			font-style: normal;
-			// border-block-end: 2px solid $color-2;
 			text-decoration: underline;
 			text-decoration-color: $color-2;
 			text-underline-offset: 0.55rem;

@@ -19,6 +19,54 @@ $breakpoints: (
 	}
 }
 
+@media (max-width: 1920px) {
+	.block-birthday__decor-block-1 .title {
+		font-size: 17.5rem;
+	}
+
+	.block-birthday__title {
+		font-size: 19rem;
+	}
+}
+
+@media (max-width: 1800px) {
+	.header__nav--is-right {
+		margin-inline: 0;
+	}
+
+	.header__image {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 1620px) {
+	.block-intro__item-1 .block-intro__item-text {
+		font-size: 11rem;
+		min-width: 85%;
+		width: min-content;
+	}
+
+	.header__nav>ul>li>a {
+		font-size: 1.8rem;
+	}
+
+	.header-inner {
+		justify-content: center;
+	}
+
+	.block-birthday__box {
+		min-height: 235rem;
+	}
+
+	.block-birthday__title {
+		font-size: 18rem;
+	}
+
+	.block-birthday__decor-block-1 .title {
+		font-size: 16rem;
+	}
+}
+
 @include mq("desktop-wide") {
 	:root {
 		font-size: 9.5px;
@@ -29,11 +77,49 @@ $breakpoints: (
 	:root {
 		font-size: 8.25px;
 	}
+
+	.header__nav>ul>li>a {
+		font-size: 2rem;
+	}
+
+	.block-birthday__decor-block-1 .title {
+		font-size: 17rem;
+	}
+}
+
+@media (max-width: 1320px) {
+	.block-birthday__decor-block-1 .title {
+		font-size: 16rem;
+	}
 }
 
 @include mq("laptop") {
 	:root {
 		font-size: 7px;
+	}
+
+	.block-birthday__title {
+		font-size: 18rem;
+	}
+
+	.block-birthday__decor-block-1 .title {
+		font-size: 17rem;
+	}
+
+	.header {
+		&__nav {
+			&--is {
+				&-right {
+					margin-inline-end: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1120px) {
+	.block-birthday__decor-block-1 .title {
+		font-size: 15.5rem;
 	}
 }
 
